@@ -17,3 +17,13 @@ https://dev.to/afif/border-with-gradient-and-radius-387f
   -webkit-mask-composite: xor;
           mask-composite: exclude; 
 }
+
+//градиент в качестве цвета текста
+
+  background: -webkit-linear-gradient(
+        90deg,
+        #9de790 -50.89%,
+        #3a6639 103.87%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
