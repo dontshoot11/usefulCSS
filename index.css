@@ -18,6 +18,16 @@ https://dev.to/afif/border-with-gradient-and-radius-387f
           mask-composite: exclude; 
 }
 
+//чтобы не моргали кнопки при тапах в мобильном хроме
+
+*:focus,
+*:active {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+
 //градиент в качестве цвета текста
 
   background: -webkit-linear-gradient(
