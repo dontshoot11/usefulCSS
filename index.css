@@ -37,3 +37,8 @@ https://dev.to/afif/border-with-gradient-and-radius-387f
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+
+//Полупрозрачная маска на текст
+.className {
+    -webkit-mask-image: -webkit-linear-gradient(top, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.03) 100%);}
