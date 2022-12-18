@@ -42,3 +42,12 @@ https://dev.to/afif/border-with-gradient-and-radius-387f
 //Полупрозрачная маска на текст
 .className {
     -webkit-mask-image: -webkit-linear-gradient(top, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.03) 100%);}
+
+
+// размытое пятно в помощью градиента
+
+background: radial-gradient(
+                50% 50% at 50% 50%,
+                #2bc57c 0%,
+                rgba(0, 0, 0, 0) 100%
+            );
