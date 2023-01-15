@@ -34,7 +34,7 @@ https://dev.to/afif/border-with-gradient-and-radius-387f
         90deg,
         #9de790 -50.89%,
         #3a6639 103.87%
-    );
+    );background
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
@@ -50,4 +50,36 @@ background: radial-gradient(
                 50% 50% at 50% 50%,
                 #2bc57c 0%,
                 rgba(0, 0, 0, 0) 100%
-            );
+            );background
+
+// анимированное кольцо загрузки через svg
+
+<div className='progressbar'>
+<svg viewBox="0 0 100 100">
+  <path d="M 50 96 a 46 46 0 0 1 0 -92 46 46 0 0 1 0 92" />
+</svg>
+<div className="p-home-m-seo-quotes__item-img">{img}</div>
+</div>
+
+.progressbar {
+  path {
+    stroke: var(--accent-alpha);
+    stroke-width: 2;
+    stroke-dasharray: 288.5; 
+    stroke-linecap: round;
+    fill: none;
+    transform-origin: 50px 50px;
+    animation: pathStroke 5000ms linear;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes pathStroke {
+    0% {
+      stroke-dashoffset: -288.5;
+    }
+
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+}
